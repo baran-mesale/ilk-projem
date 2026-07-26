@@ -1,0 +1,25 @@
+/* Tüm sayfanın (gövdenin) ayarları */
+body {
+  background-color: #f4f6f4; /* Çok açık, ferah bir gri/yeşil tonu */
+  color: #333333; /* Tam siyah yerine göz yormayan koyu gri metin rengi */
+  font-family: Arial, sans-serif; /* Daha modern ve temiz bir yazı tipi */
+}
+
+/* Sadece h1 (Ana başlık) ayarları */
+h1 {
+  color: #2c5e50; /* Orman yeşili */
+  text-align: center; /* Yazıyı sayfanın tam ortasına hizalar */
+}
+
+/* Sadece h2 (Alt başlık) ayarları */
+h2 {
+  color: #3e8e41; /* Biraz daha açık bir yeşil */
+  border-bottom: 2px solid #3e8e41; /* Altına 2 piksellik düz bir çizgi çeker */
+}
+
+/* Linklerin (a) görünüm ayarları */
+a {
+  color: #d35400; /* Kamp ateşine uygun turuncu/kiremit rengi */
+  text-decoration: none; /* Linklerin altındaki varsayılan çizgiyi kaldırır */
+  font-weight: bold; /* Yazıyı kalınlaştırır */
+}
