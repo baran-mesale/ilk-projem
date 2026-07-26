@@ -47,3 +47,19 @@ a {
   display: flex; /* İçindeki tüm elemanları yatayda yan yana dizer */
   gap: 20px; /* Kartların birbirine yapışmaması için aralarına 20 piksel boşluk bırakır */
 }
+
+/* Bu sınıf body'ye eklendiğinde aktif olacak karanlık tema ayarları */
+.karanlik-tema {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Karanlık temadayken kamp kartlarının da rengi değişsin */
+.karanlik-tema .kamp-karti {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.karanlik-tema .kamp-karti h3 {
+  color: #64b5f6; /* Koyu temada daha okunaklı bir mavi */
+}

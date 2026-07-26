@@ -1,14 +1,13 @@
-// 1. Önce HTML'deki butonu 'id' numarası ile bulup, 'geceModuButonu' adında bir kutuya (değişkene) koyuyoruz.
 let geceModuButonu = document.getElementById("gece-butonu");
 
-// 2. Şimdi bu butona bir "Olay Dinleyici" (EventListener) ekliyoruz. Kulaklarını dikip "click" (tıklanma) anını bekleyecek.
 geceModuButonu.addEventListener("click", function() {
+    // toggle: Eğer 'karanlik-tema' sınıfı yoksa ekler, varsa çıkarır. (Aç-Kapa mantığı)
+    document.body.classList.toggle("karanlik-tema");
     
-    // 3. Butona tıklandığında süslü parantezlerin içindeki bu görev çalışacak:
-    // Sayfanın gövdesini (body) bul, stiline git, arka plan rengini koyu gri yap.
-    document.body.style.backgroundColor = "#121212";
-    
-    // Yazı rengini de okunabilmesi için beyaz yap.
-    document.body.style.color = "#ffffff";
-    
+    // Butonun içindeki yazıyı da duruma göre değiştirelim
+    if (document.body.classList.contains("karanlik-tema")) {
+        geceModuButonu.innerText = "Gündüz Moduna Dön";
+    } else {
+        geceModuButonu.innerText = "Gece Modunu Aç";
+    }
 });
