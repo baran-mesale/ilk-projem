@@ -63,3 +63,26 @@ a {
 .karanlik-tema .kamp-karti h3 {
   color: #64b5f6; /* Koyu temada daha okunaklı bir mavi */
 }
+
+/* Ekran genişliği 768 piksel (tablet ve telefonlar) ve altındaysa bu kurallar geçerli olur */
+@media (max-width: 768px) {
+  
+  /* Sayfa kenarlarındaki boşlukları mobilde daraltalım ki içerik sığsın */
+  body {
+    padding: 10px; 
+  }
+  
+  /* Kamp kartları yan yana sıkışmak yerine alt alta tam ekran hizalansın */
+  .kamp-karti {
+    width: 100%; 
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  /* Mobilde butona parmakla daha rahat tıklanabilmesi için boyutunu büyütelim */
+  #gece-butonu {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+  }
+}
