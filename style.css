@@ -33,10 +33,17 @@ a {
   margin-top: 30px; /* Kutunun üstündeki elementlerle arasına 30 piksel dış boşluk bırak */
   border-radius: 12px; /* Kutunun köşelerini 12 piksel yuvarlat (daha yumuşak bir görünüm) */
   box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* Kutuya hafif, şık bir gölge ver */
+  flex: 1;
 }
 
 /* Kartın içindeki başlığın rengini de değiştirelim */
 .kamp-karti h3 {
   color: #2980b9; /* Su mavisi bir başlık */
   margin-top: 0; /* Başlığın kendi varsayılan üst boşluğunu sıfırlayalım ki yukarı tam otursun */
+}
+
+/* Ana kapsayıcıyı Flexbox'a çeviriyoruz */
+.kart-kapsayici {
+  display: flex; /* İçindeki tüm elemanları yatayda yan yana dizer */
+  gap: 20px; /* Kartların birbirine yapışmaması için aralarına 20 piksel boşluk bırakır */
 }
