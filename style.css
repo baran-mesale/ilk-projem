@@ -23,3 +23,20 @@ a {
   text-decoration: none; /* Linklerin altındaki varsayılan çizgiyi kaldırır */
   font-weight: bold; /* Yazıyı kalınlaştırır */
 }
+
+
+/* Class isimlerini CSS'te seçerken her zaman başına nokta (.) koyarız */
+.kamp-karti {
+  background-color: #ffffff; /* Kutunun içi bembeyaz olsun */
+  border: 1px solid #dcdcdc; /* Etrafına 1 piksel kalınlığında açık gri bir çizgi/duvar çek */
+  padding: 20px; /* İçindeki yazılar duvarlardan 20 piksel uzak dursun (Nefes alsın) */
+  margin-top: 30px; /* Kutunun üstündeki elementlerle arasına 30 piksel dış boşluk bırak */
+  border-radius: 12px; /* Kutunun köşelerini 12 piksel yuvarlat (daha yumuşak bir görünüm) */
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* Kutuya hafif, şık bir gölge ver */
+}
+
+/* Kartın içindeki başlığın rengini de değiştirelim */
+.kamp-karti h3 {
+  color: #2980b9; /* Su mavisi bir başlık */
+  margin-top: 0; /* Başlığın kendi varsayılan üst boşluğunu sıfırlayalım ki yukarı tam otursun */
+}
