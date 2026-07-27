@@ -86,3 +86,11 @@ a {
     font-size: 16px;
   }
 }
+
+/* Haritaların kartların dışına taşmasını engeller ve köşelerini yumuşatır */
+.kamp-karti iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px; /* Tasarıma şıklık katar */
+  margin-top: 15px;
+}
