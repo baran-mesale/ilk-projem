@@ -30,3 +30,22 @@ const kamp2 = L.marker([40.4100, 29.6800]).addTo(harita);
 kamp2.bindPopup("<b>Güney Orman Kampı</b><br>Ağaçların arasında harika bir doğa deneyimi.");
 
 // İstediğin kadar pin ekleyebilirsin, sadece koordinatları değiştirmen yeterli!
+
+// İznik'in koordinatları için Open-Meteo API adresi
+const apiAdresi = 'https://api.open-meteo.com/v1/forecast?latitude=40.4333&longitude=29.7166&current_weather=true';
+
+// fetch komutu ile adrese gidip veriyi çekiyoruz
+fetch(apiAdresi)
+  .then(cevap => cevap.json()) // Gelen ham veriyi düzenli JSON formatına çevir
+  .then(veri => {
+      // Veri başarıyla geldiğinde burası çalışır
+      const sicaklik = veri.current_weather.temperature;
+      
+      // HTML'deki 'derece' id'li paragrafı bul ve sıcaklığı içine yaz
+      document.getElementById('derece').innerHTML = `Şu anki sıcaklık: <strong>${sicaklik}°C</strong>`;
+  })
+  .catch(hata => {
+      // Eğer internet yoksa veya bağlantı koparsa hata mesajı göster
+      document.getElementById('derece').innerText = "Hava durumu verisi çekilemedi.";
+      console.error("Veri çekme hatası:", hata);
+  });
