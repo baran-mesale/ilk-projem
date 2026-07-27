@@ -11,3 +11,22 @@ geceModuButonu.addEventListener("click", function() {
         geceModuButonu.innerText = "Gece Modunu Aç";
     }
 });
+
+// Haritayı oluştur ve İznik Gölü koordinatlarına merkezle, yakınlaştırma seviyesini (zoom) 11 yap
+const harita = L.map('harita').setView([40.4333, 29.7166], 11);
+
+// Harita görsellerini (sokaklar, dağlar, göller) OpenStreetMap üzerinden çek
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap'
+}).addTo(harita);
+
+// 1. Kamp Alanı İçin Pin (İşaretçi) Ekleme
+const kamp1 = L.marker([40.4500, 29.7500]).addTo(harita);
+kamp1.bindPopup("<b>Kuzey Sahil Kamp Alanı</b><br>Göl kenarında sessiz ve ıssız bir nokta.");
+
+// 2. Kamp Alanı İçin Pin (İşaretçi) Ekleme
+const kamp2 = L.marker([40.4100, 29.6800]).addTo(harita);
+kamp2.bindPopup("<b>Güney Orman Kampı</b><br>Ağaçların arasında harika bir doğa deneyimi.");
+
+// İstediğin kadar pin ekleyebilirsin, sadece koordinatları değiştirmen yeterli!

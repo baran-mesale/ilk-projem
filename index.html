@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <!-- Leaflet Harita CSS Dosyası -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<!-- Leaflet Harita JS Dosyası -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
     <title>İznik Kamp Rehberi</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +15,9 @@
 
     <h1>Sessiz ve Sakin Kamp Alanları</h1>
     <p>Bursa ve çevresindeki en izole kamp rotalarını keşfedin. Kalabalıktan uzak, sadece doğanın sesiyle baş başa kalacağınız yerler...</p>
+
+    <!-- Harita bu div'in içinde oluşacak -->
+    <div id="harita"></div>
 
     <h2>Örnek Kamp Menüsü</h2>
 <ul>
